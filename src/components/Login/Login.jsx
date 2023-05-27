@@ -39,9 +39,8 @@ const Login = () => {
 
         <p className=" block text-red-700 text-sm font-bold mb-2">
           Don't have an account?{" "}
-          <Link className="text-green-700" to="/register">
-            {" "}
-            Register{" "}
+          <Link to="/register" className="text-green-700 text-xl ml-2" >
+            Register
           </Link>
         </p>
 
