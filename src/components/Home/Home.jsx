@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import CardDetails from "../CardDetails/CardDetails";
 
 const Home = () => {
+  const [chefs, setChefs] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5005/chefs")
+      .then((res) => res.json())
+      .then((data) => setChefs(data))
+      .catch((error) => console.log(error));
+  }, []);
   return (
     <div>
+      {/* carousel */}
+
       <div style={{ height: "600px" }} className="carousel w-screen">
         <div id="item1" className="carousel-item  w-screen ">
           <img
@@ -29,7 +39,7 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="flex justify-center w-full py-2 gap-2">
+      <div className="flex justify-center w-full py-10 gap-5">
         <a href="#item1" className="btn btn-xs">
           1
         </a>
@@ -43,7 +53,17 @@ const Home = () => {
           4
         </a>
       </div>
-    </div>
+      {/* carousel end */}
+
+      {/* card */}
+    
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-3 ">
+          {chefs.map((chef) => (
+            <CardDetails key={chef.id} chef={chef}></CardDetails>
+          ))}
+        </div>
+      </div>
+    //  last end div
   );
 };
 
