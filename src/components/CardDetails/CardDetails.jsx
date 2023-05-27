@@ -24,7 +24,7 @@ const CardDetails = ({ chef }) => {
 
           <div className="w-full justify-center items-center">
             <button className="btn btn-primary w-full rounded-lg">
-              Buy Now
+              View Recipes
             </button>
           </div>
         </div>
