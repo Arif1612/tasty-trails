@@ -46,7 +46,7 @@ const Navbar = () => {
         <div className="text-2xl w-1/4 flex justify-center items-center mr-5">
           {user && (
             <>
-              <span className="mr-2 hover:{user.displayName}">
+              <span className="mr-4 hover:{user.displayName}">
                 <img style={{height:64}}
                   className="rounded-full "
                   src={user.photoURL}
