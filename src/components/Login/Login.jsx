@@ -4,7 +4,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, google } = useContext(AuthContext);
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -33,12 +33,37 @@ const Login = () => {
       });
   };
 
+  // google sign in
+
+  const handleGoogleSignIn = () => {
+    google()
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        navigate("/");
+        toast("Congratulation Login Successfully");
+      })
+
+      .catch((error) => {
+        console.log(error);
+        setErrorMessage(error.message);
+      });
+  };
+
   return (
-    <div className="flex justify-center items-center">
-      <form onSubmit={handleLogin} className="w-6/12 bg-gray-400 shadow-md rounded px-8 py-6 mt-28">
+    <div className="flex flex-col  justify-center items-center">
+      <form
+        onSubmit={handleLogin}
+        className="w-6/12 bg-purple-300 shadow-md rounded px-8 py-6 mt-28"
+      >
         <div className="mb-4">
-          <h2 className="text-green-700 text-4xl font-bold text-center">Login</h2>
-          <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
+          <h2 className="text-green-700 text-4xl font-bold text-center">
+            Login
+          </h2>
+          <label
+            htmlFor="email"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
             Email
           </label>
           <input
@@ -50,7 +75,10 @@ const Login = () => {
           />
         </div>
         <div className="mb-6">
-          <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
+          <label
+            htmlFor="password"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
             Password
           </label>
           <input
@@ -68,7 +96,7 @@ const Login = () => {
 
         <p className="block text-red-700 text-sm font-bold mb-2">
           Don't have an account?{" "}
-          <Link to="/register" className="text-green-700">
+          <Link to="/register" className="text-green-700 text-xl">
             Register
           </Link>
         </p>
@@ -82,6 +110,15 @@ const Login = () => {
           </button>
         </div>
       </form>
+      <div className="w-6/12">
+        <button
+          onClick={handleGoogleSignIn}
+          className="btn btn-primary w-full mt-3 "
+        >
+          Google SignIn
+        </button>
+        <button className="btn btn-secondary w-full mt-3">Github SignIn</button>
+      </div>
     </div>
   );
 };
