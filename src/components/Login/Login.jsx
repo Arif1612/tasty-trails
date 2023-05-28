@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -24,6 +25,7 @@ const Login = () => {
         console.log(loggedUser);
         // Navigate to "/" after successful login
         navigate("/");
+        toast("Congratulation Login Successfully");
       })
       .catch((error) => {
         console.log(error);

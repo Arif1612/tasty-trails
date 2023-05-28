@@ -1,9 +1,12 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleRegister = (event) => {
     event.preventDefault();
@@ -13,15 +16,16 @@ const Register = () => {
     const photoUrl = form.photoUrl.value;
     const password = form.password.value;
 
-   
-
     createUser(email, password)
       .then((result) => {
         const createdUser = result.user;
         console.log(createdUser);
+        toast("Congratulations Register Successfully");
+        navigate("/");
       })
       .catch((error) => {
         const errorMessage = error.message;
+        setErrorMessage(error.message);
       });
   };
 
@@ -91,7 +95,10 @@ const Register = () => {
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
-
+        {/* eroor message */}
+        {errorMessage && (
+          <p className="text-red-700 text-xl font-bold mb-2">{errorMessage}</p>
+        )}
         <p className=" block text-red-700 text-sm font-bold mb-2">
           Already have an account?
           <Link to="/login" className="text-green-700 text-xl ml-2">
