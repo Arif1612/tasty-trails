@@ -4,7 +4,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const { signIn, google } = useContext(AuthContext);
+  const { signIn, google, github } = useContext(AuthContext);
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -33,10 +33,31 @@ const Login = () => {
       });
   };
 
-  // google sign in
+  /****************************
+   * google sign in
+   * ******************** */
 
   const handleGoogleSignIn = () => {
     google()
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        navigate("/");
+        toast("Congratulation Login Successfully");
+      })
+
+      .catch((error) => {
+        console.log(error);
+        setErrorMessage(error.message);
+      });
+  };
+
+  /*******************
+   * github sign in
+   *******************/
+
+  const handleGithubSignIn = () => {
+    github()
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
@@ -117,7 +138,12 @@ const Login = () => {
         >
           Google SignIn
         </button>
-        <button className="btn btn-secondary w-full mt-3">Github SignIn</button>
+        <button
+          onClick={handleGithubSignIn}
+          className="btn btn-secondary w-full mt-3"
+        >
+          Github SignIn
+        </button>
       </div>
     </div>
   );

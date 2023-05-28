@@ -17,28 +17,50 @@ const Navbar = () => {
     <div className="navbar bg-base-100 bg-blue-200 w-screen mx-auto px-4">
       <div className="flex items-center justify-between w-full">
         <div className="w-1/4 flex justify-center">
-          <NavLink exact to="/" className="text-2xl font-bold mr-3" activeClassName="text-red-700">
+          <NavLink
+            exact
+            to="/"
+            className="text-2xl font-bold mr-3"
+            activeClassName="text-red-700"
+          >
             Tasty Trails
           </NavLink>
         </div>
         <div className="text-2xl w-2/4 flex justify-center">
-          <NavLink  to="/" className="mr-2 hover:text-red-700" activeClassName="text-red-700 font-bold ">
+          <NavLink
+            to="/"
+            className="mr-2 hover:text-red-700"
+            activeClassName="text-red-700 font-bold "
+          >
             Home
           </NavLink>
-          <NavLink to="/blog" className="mr-2 hover:text-red-700" activeClassName="text-red-700 font-bold">
+          <NavLink
+            to="/blog"
+            className="mr-2 hover:text-red-700"
+            activeClassName="text-red-700 font-bold"
+          >
             Blog
           </NavLink>
         </div>
 
-        <div className="text-2xl w-1/4 flex justify-center items-center">
+        <div className="text-2xl w-1/4 flex justify-center items-center mr-5">
           {user && (
             <>
-              <FaUserCircle style={{ fontSize: "2rem", marginRight: "0.5rem" }} />
-              <span className="mr-2">{user.email}</span>
+              <span className="mr-2 hover:{user.displayName}">
+                <img style={{height:64}}
+                  className="rounded-full "
+                  src={user.photoURL}
+                  alt=""
+                />
+                
+              </span>
             </>
           )}
           {user ? (
-            <button onClick={handleLogOut} className="btn btn-active btn-secondary">
+            <button
+              onClick={handleLogOut}
+              className="btn btn-active btn-secondary"
+            >
               Logout
             </button>
           ) : (
