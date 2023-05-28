@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const ChefRecipes = () => {
   const [isButtonDisabled, setButtonDisabled] = useState(false);
@@ -8,14 +9,17 @@ const ChefRecipes = () => {
 
   const handleButtonClick = () => {
     setButtonDisabled(true);
+    toast("Good Choice");
   };
-  
+
   const handleButtonClickTwo = () => {
     setButtonDisabledTwo(true);
+    toast("Good Choice");
   };
-  
+
   const handleButtonClickThree = () => {
     setButtonDisabledThree(true);
+    toast("Good Choice");
   };
   const chef = useLoaderData();
   const {
