@@ -18,42 +18,40 @@ const Navbar = () => {
       <div className="flex items-center justify-between w-full">
         <div className="w-1/4 flex justify-center">
           <NavLink
-            exact
             to="/"
             className="text-2xl font-bold mr-3"
-            activeClassName="text-red-700"
           >
             Tasty Trails
           </NavLink>
         </div>
-        <div className="text-2xl w-2/4 flex justify-center">
+        <div className="text-2xl w-1/4 flex justify-center">
           <NavLink
             to="/"
-            className="mr-2 hover:text-red-700"
-            activeClassName="text-red-700 font-bold "
+            className="mr-3 hover:text-red-700"
+           
           >
             Home
           </NavLink>
           <NavLink
             to="/blog"
             className="mr-2 hover:text-red-700"
-            activeClassName="text-red-700 font-bold"
           >
             Blog
           </NavLink>
         </div>
 
-        <div className="text-2xl w-1/4 flex justify-center items-center mr-5">
+        <div className="text-2xl flex-1 flex justify-end mr-14  items-center ">
           {user && (
             <>
-              <span className="mr-4 hover:{user.displayName}">
-                <img style={{height:64}}
+              <span className="mr-4 ">
+                <img
+                  style={{ height: 64 }}
                   className="rounded-full "
                   src={user.photoURL}
                   alt=""
                 />
-                
               </span>
+              <span className="mr-5">{user.displayName}</span>
             </>
           )}
           {user ? (
