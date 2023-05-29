@@ -2,7 +2,7 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <div>
+    <div className="ml-3">
       <h5 className="text-xl font-bold text-blue-500 mt-5">
         Q1.ell us the differences between uncontrolled and controlled
         components?

@@ -52,7 +52,7 @@ const ChefRecipes = () => {
       </div>
 
       {/* another section */}
-      <div className="flex justify-center items-center mt-14">
+      <div className="flex flex-col  small:flex-rol justify-center items-center mt-14 ">
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 px-4 mb-4">
           <div className="bg-white rounded-lg shadow-lg">
             <img

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CardDetails from "../CardDetails/CardDetails";
+import Marquee from "react-fast-marquee";
 
 const Home = () => {
   const [chefs, setChefs] = useState([]);
@@ -11,6 +12,7 @@ const Home = () => {
   }, []);
   return (
     <div>
+     
       {/* carousel */}
 
       <div style={{ height: "600px" }} className="carousel w-screen">
