@@ -43,7 +43,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5005/chefs/${params.chefId}`),
+          fetch(
+            `https://tasty-trails-server-arif1612.vercel.app/chefs/${params.chefId}`
+          ),
       },
     ],
   },

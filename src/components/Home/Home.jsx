@@ -5,7 +5,7 @@ import Marquee from "react-fast-marquee";
 const Home = () => {
   const [chefs, setChefs] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5005/chefs")
+    fetch("https://tasty-trails-server-arif1612.vercel.app/chefs")
       .then((res) => res.json())
       .then((data) => setChefs(data))
       .catch((error) => console.log(error));
