@@ -72,7 +72,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex flex-col  justify-center items-center">
+    <div className="flex flex-col  justify-center items-center mb-10">
       <form
         onSubmit={handleLogin}
         className="w-6/12 bg-purple-300 shadow-md rounded px-8 py-6 mt-28"

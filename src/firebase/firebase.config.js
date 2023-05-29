@@ -4,13 +4,14 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+console.log('environment variable', import.meta.env.VITE_apiKey)
 const firebaseConfig = {
-  apiKey: "AIzaSyAFl5TWkYelVqg24YQ7VjD7UlNec3FG_pY",
-  authDomain: "tasty-trails-71f0b.firebaseapp.com",
-  projectId: "tasty-trails-71f0b",
-  storageBucket: "tasty-trails-71f0b.appspot.com",
-  messagingSenderId: "651558303775",
-  appId: "1:651558303775:web:f82ae8e52cba2261b8fd2a",
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase

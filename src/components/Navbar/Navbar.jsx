@@ -14,28 +14,18 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-100 bg-blue-200 w-screen mx-auto px-4">
+    <div className="navbar bg-base-100 bg-neutral w-screen mx-auto px-4 text-white">
       <div className="flex items-center justify-between w-full">
         <div className="w-1/4 flex justify-center">
-          <NavLink
-            to="/"
-            className="text-2xl font-bold mr-3"
-          >
+          <NavLink to="/" className="text-2xl font-bold mr-3">
             Tasty Trails
           </NavLink>
         </div>
         <div className="text-2xl w-1/4 flex justify-center">
-          <NavLink
-            to="/"
-            className="mr-3 hover:text-red-700"
-           
-          >
+          <NavLink to="/" className="mr-3 hover:text-red-700">
             Home
           </NavLink>
-          <NavLink
-            to="/blogs"
-            className="mr-2 hover:text-red-700"
-          >
+          <NavLink to="/blogs" className="mr-2 hover:text-red-700">
             Blog
           </NavLink>
         </div>
