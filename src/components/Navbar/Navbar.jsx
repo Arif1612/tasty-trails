@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
-import { FaUserCircle } from "react-icons/fa";
+
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -14,14 +14,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-neutral  px-4 text-white">
+    <div className="navbar bg-neutral  text-white">
       <div className="flex items-center justify-between w-full">
-        <div className="w-1/4 flex justify-center">
+        <div className="w-1/4 flex justify-start ms-12">
           <NavLink to="/" className="text-2xl font-bold mr-3 hover:text-red-700">
             Tasty Trails
           </NavLink>
         </div>
-        <div className="text-2xl w-1/4 flex justify-center">
+        <div className="text-2xl w-1/4 flex justify-end">
           <NavLink to="/" className="mr-3 hover:text-red-700">
             Home
           </NavLink>
@@ -30,7 +30,7 @@ const Navbar = () => {
           </NavLink>
         </div>
 
-        <div className="text-2xl flex-1 flex justify-end mr-14  items-center ">
+        <div className="text-2xl flex-1 flex justify-end mr-12  items-center ">
           {user && (
             <>
               <span className="mr-4 ">
