@@ -25,7 +25,7 @@ const Features = () => {
           <div className="card-body items-center text-center">
             <h2 className="card-title">Chicken Birayni</h2>
             <div className="card-actions">
-              <button className="btn btn-primary">Buy Now</button>
+                {/* <button className="btn btn-primary">Buy Now</button> */}
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@ const Features = () => {
           <div className="card-body items-center text-center">
             <h2 className="card-title">Butter Chicken</h2>
             <div className="card-actions">
-              <button className="btn btn-primary">Buy Now</button>
+            {/* <button className="btn btn-primary">Buy Now</button> */} 
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ const Features = () => {
           <div className="card-body items-center text-center">
             <h2 className="card-title">Dal Makani</h2>
             <div className="card-actions">
-              <button className="btn btn-primary">Buy Now</button>
+                {/* <button className="btn btn-primary">Buy Now</button> */}
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@ const Features = () => {
           <div className="card-body items-center text-center">
             <h2 className="card-title">Chole Bature</h2>
             <div className="card-actions">
-              <button className="btn btn-primary">Buy Now</button>
+                {/* <button className="btn btn-primary">Buy Now</button> */}
             </div>
           </div>
         </div>
@@ -89,7 +89,7 @@ const Features = () => {
           <div className="card-body items-center text-center">
             <h2 className="card-title">Palak Paneer</h2>
             <div className="card-actions">
-              <button className="btn btn-primary">Buy Now</button>
+                {/* <button className="btn btn-primary">Buy Now</button> */}
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@ const Features = () => {
           <div className="card-body items-center text-center">
             <h2 className="card-title">Rogan Jost</h2>
             <div className="card-actions">
-              <button className="btn btn-primary">Buy Now</button>
+                {/* <button className="btn btn-primary">Buy Now</button> */}
             </div>
           </div>
         </div>
