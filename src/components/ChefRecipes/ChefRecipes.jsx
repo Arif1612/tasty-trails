@@ -35,21 +35,21 @@ const ChefRecipes = () => {
   console.log(name, picture, years_of_experience);
   return (
     <div>
-      <div className="card grid grid-cols-1 md:grid-cols-2 w-full   ">
-        <div className="w-full ">
+      <div className="card grid grid-cols-1 md:grid-cols-2 m-6 sm:m-0  ">
+        <div >
         <figure>
           <img className="w-full mr-16 " style={{ height: 500 }} src={picture} alt="Album" />
         </figure>
         </div>
         
-        <div className=" w-full">
-          <h2 className="text-xl font-bold">{name}</h2>
-          <p className="text-xl my-3 ">{recipe_details}</p>
-          <p className="text-xl my-3">Likes: {likes}</p>
-          <p className="text-xl my-3">
+        <div className=" items-center my-auto ">
+          <h2 className="text-xl mb-3 mt-5 font-bold">{name}</h2>
+          <p className="text-xl mb-3">{recipe_details}</p>
+          <p className="text-xl mb-3">Likes: {likes}</p>
+          <p className="text-xl mb-3">
             Numbers of Recipes: {numbers_of_recipes}
           </p>
-          <p className="text-xl my-3">
+          <p className="text-xl ">
             Years of Experience: {years_of_experience}
           </p>
         </div>

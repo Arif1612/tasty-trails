@@ -4,6 +4,7 @@ import Container from "../../Container";
 import FoodItem from "./FoodItem";
 import Carousel from "./Carousel";
 import OurStrength from "./OurStrength";
+import Features from "./Features";
 
 const Home = () => {
   const [chefs, setChefs] = useState([]);
@@ -28,7 +29,7 @@ const Home = () => {
           ))}
         </div>
         {/* card end */}
-
+         <Features></Features>
         <FoodItem></FoodItem>
          <OurStrength></OurStrength>
 
