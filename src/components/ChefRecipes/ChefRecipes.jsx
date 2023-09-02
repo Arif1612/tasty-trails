@@ -35,16 +35,16 @@ const ChefRecipes = () => {
   console.log(name, picture, years_of_experience);
   return (
     <div>
-      <div className="card p-0 lg:card-side bg-base-100 shadow-xl ">
-        <div className="w-1/2 ">
+      <div className="card grid grid-cols-1 md:grid-cols-2 w-full   ">
+        <div className="w-full ">
         <figure>
-          <img style={{ height: 500 }} src={picture} alt="Album" />
+          <img className="w-full mr-16 " style={{ height: 500 }} src={picture} alt="Album" />
         </figure>
         </div>
         
-        <div className=" w-1/2 ml-10 mr-5 mt-5">
+        <div className=" w-full">
           <h2 className="text-xl font-bold">{name}</h2>
-          <p className="text-xl my-3">{recipe_details}</p>
+          <p className="text-xl my-3 ">{recipe_details}</p>
           <p className="text-xl my-3">Likes: {likes}</p>
           <p className="text-xl my-3">
             Numbers of Recipes: {numbers_of_recipes}
@@ -57,7 +57,7 @@ const ChefRecipes = () => {
 
       {/* another section */}
       <Container>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mt-10 mb-10">
         <div className="w-full">
           <div className="bg-white rounded-lg shadow-lg ">
             <img

@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "../../Container";
+
 
 const FoodItem = () => {
   return (
@@ -22,7 +22,7 @@ const FoodItem = () => {
           </ul>
         </div>
         {/* 2 */}
-        <div className="text-start">
+        <div className="text-start ">
           <h4 className="text-2xl font-bold">Main Courses:</h4>
           <ul className="list-decimal list-inside">
             <li>Butter Chicken - $12.99</li>
