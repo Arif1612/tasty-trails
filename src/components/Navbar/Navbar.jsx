@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-100 bg-neutral w-screen mx-auto px-4 text-white">
+    <div className="navbar bg-neutral  px-4 text-white">
       <div className="flex items-center justify-between w-full">
         <div className="w-1/4 flex justify-center">
           <NavLink to="/" className="text-2xl font-bold mr-3 hover:text-red-700">

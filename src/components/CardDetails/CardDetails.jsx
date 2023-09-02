@@ -13,7 +13,7 @@ const CardDetails = ({ chef }) => {
   } = chef;
   return (
     <div className="flex justify-center items-center">
-      <div className="card w-96 bg-base-100">
+      <div className="card w-full gap-6  bg-base-100">
         <figure>
           <img className="w-11/12 h-48 rounded-lg" src={picture} alt="Shoes" />
         </figure>
