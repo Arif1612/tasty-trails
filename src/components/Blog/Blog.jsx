@@ -1,8 +1,10 @@
 import React from "react";
+import Container from "../../Container";
 
 const Blog = () => {
   return (
-    <div className="ml-3">
+   <Container>
+     <div className="ml-3">
       <h5 className="text-xl font-bold text-blue-500 mt-5">
         Q1.ell us the differences between uncontrolled and controlled
         components?
@@ -51,6 +53,7 @@ const Blog = () => {
         isolation.
       </p>
     </div>
+   </Container>
   );
 };
 

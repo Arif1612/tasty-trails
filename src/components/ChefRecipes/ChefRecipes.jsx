@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
+import Container from "../../Container";
 
 const ChefRecipes = () => {
   const [isButtonDisabled, setButtonDisabled] = useState(false);
@@ -33,12 +34,13 @@ const ChefRecipes = () => {
   } = chef;
   console.log(name, picture, years_of_experience);
   return (
-    <div>
-      <div className="card lg:card-side bg-base-100 shadow-xl ">
+    <Container>
+      <div>
+      <div className="card p-0 lg:card-side bg-base-100 shadow-xl ">
         <figure>
           <img style={{ height: 500 }} src={picture} alt="Album" />
         </figure>
-        <div className=" w-6/12 ml-10 mt-5">
+        <div className=" w-6/12 ml-10 mr-5 mt-5">
           <h2 className="text-xl font-bold">{name}</h2>
           <p className="text-xl my-3">{recipe_details}</p>
           <p className="text-xl my-3">Likes: {likes}</p>
@@ -175,6 +177,7 @@ const ChefRecipes = () => {
         </div>
       </div>
     </div>
+    </Container>
   );
 };
 
